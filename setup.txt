@@ -1,0 +1,14 @@
+1. Download kernel headers from https://users.armbian.com/balbes150/arm-64/deb/
+2. Install kernel headers with dpkg -i
+3. Git clone https://github.com/arthur-liberman/linux_openvfd
+4. Edit Makefile content as my Makefile
+5. Run sudo ln -sf /boot/System.map-$(uname -r) /lib/modules/$(uname -r)/build/System.map
+6. Run make -j 4 within linux_openvfd/driver folder
+7. Run sudo depmod -a (Optional)
+8. Run sudo make modules_install
+9. Verify if our openvfd module is successfully installed/loaded by lsmod. If not, run sudo modprobe openvfd.
+10. Run make OpenVFDService within linux_openvfd.
+11. Place your vfd.conf into /storage/.config folder.
+12. Create openvfd.service as mine.
+13. Start openvfd.service
+14. Enable openvfd.service for autorestart after reboot.
