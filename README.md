@@ -10,12 +10,12 @@ How to enable OpenVFD Service for tx box running armbian (Amlogic, Rockchip,...)
 8. Run sudo make modules_install
 9. Verify if our openvfd module is successfully installed/loaded by lsmod. If not, run sudo modprobe openvfd.
 10. Run make OpenVFDService within linux_openvfd. Add executable priviledge by running chmod +x 
-11. Modify your device tree source by adding openvfd item
-openvfd {
-	compatible = "open,vfd";
-	dev_name = "openvfd";
-	status = "okay";
-};
+11. Modify your device tree source by adding openvfd item: \
+`openvfd {` \
+	`compatible = "open,vfd";` \
+	`dev_name = "openvfd";` \
+	`status = "okay";` \
+`};` \
 12. Place your vfd.conf into /storage/.config folder.
 13. Create openvfd.service as mine.
 14. Start openvfd.service
