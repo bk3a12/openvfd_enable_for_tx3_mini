@@ -1,6 +1,6 @@
 How to enable OpenVFD Service for tx box running armbian (Amlogic, Rockchip,...)
 
-1. Download kernel headers for amlogic from https://users.armbian.com/balbes150/arm-64/deb/ For other tv box types please contact Rom authors.
+1. Download kernel headers for amlogic from https://users.armbian.com/balbes150/arm-64/deb/. For other tv box types please contact Rom authors.
 2. Install kernel headers with dpkg -i
 3. Git clone https://github.com/arthur-liberman/linux_openvfd
 4. Edit Makefile content as my Makefile
