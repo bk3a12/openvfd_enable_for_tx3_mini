@@ -7,7 +7,7 @@
 7. Run sudo depmod -a (Optional)
 8. Run sudo make modules_install
 9. Verify if our openvfd module is successfully installed/loaded by lsmod. If not, run sudo modprobe openvfd.
-10. Run make OpenVFDService within linux_openvfd.
+10. Run make OpenVFDService within linux_openvfd. Add executable priviledge by running chmod +x OpenVFDService
 11. Place your vfd.conf into /storage/.config folder.
 12. Create openvfd.service as mine.
 13. Start openvfd.service
