@@ -6,7 +6,7 @@ Wants=network-online.target
 Type=simple
 Environment="OPTS=-12h"
 ExecStartPre=/bin/sh -c ". /storage/.config/vfd.conf; /sbin/modprobe openvfd vfd_gpio_clk=$vfd_gpio_clk vfd_gpio_dat=$vfd_gpio_dat vfd_gpio_stb=$vfd_gpio_stb vfd_chars=$vfd_chars vfd_dot_bits=$vfd_dot_bits vfd_display_type=$vfd_display_type;"
-ExecStart=/home/dale/OpenVFDService $OPTS &
+ExecStart=/your/path/to/OpenVFDService $OPTS &
 ExecStop=/usr/bin/killall OpenVFDService
 ExecStopPost=-/sbin/rmmod openvfd
 
